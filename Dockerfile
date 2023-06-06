@@ -19,8 +19,11 @@ WORKDIR /root/Rekunov_Mikhail_221_353
 # Копирование всех файлов
 COPY . .
 
-# Компиляция проекта (на данном этапе не вышла, команда RUN make, не выполняется корректно)
+# Компиляция проекта
 RUN qmake ServerApp.pro
 RUN make
 
-CMD ["./ManageServer"]
+CMD ["./ServerApp"]
+
+#Компиляция успешна
+#Сервер запускается
