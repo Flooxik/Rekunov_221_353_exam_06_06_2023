@@ -1,9 +1,9 @@
-QT       += core
+QT       += core network
 QT       -= gui
 
 CONFIG += c++11
 
-TARGET = ManageServer
+TARGET = ServerApp
 CONFIG += console
 CONFIG -= app_bundle
 
@@ -16,9 +16,8 @@ SOURCES += \
 HEADERS += \
         mytcpserver.h
 
-LIBS += -L/usr/lib/x86_64-linux-gnu -lQt5Network
-
 unix {
     target.path = /opt/$${TARGET}/bin
     INSTALLS += target
 }
+
